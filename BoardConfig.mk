@@ -27,5 +27,10 @@ TARGET_OTA_ASSERT_DEVICE := LT25i,tsubasa
 
 BOARD_HARDWARE_CLASS := device/sony/tsubasa/cmhw
 
+# Enable dex-preoptimization to speed up first boot sequence
+WITH_DEXPREOPT := true
+WITH_DEXPREOPT_COMP := true
+DONT_DEXPREOPT_PREBUILTS := true
+
 # inherit from the proprietary version
 -include vendor/sony/tsubasa/BoardConfigVendor.mk
