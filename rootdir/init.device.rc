@@ -3,6 +3,30 @@ on boot
     chown system system /sys/devices/virtual/timed_output/vibrator/level
     chmod 666 /sys/devices/virtual/timed_output/vibrator/level
 
+    # LED fix
+    chown system system /sys/class/leds/pwr-red/use_pattern
+    chmod 664 /sys/class/leds/pwr-red/use_pattern
+    chown system system /sys/class/leds/pwr-red/brightness
+    chmod 664 /sys/class/leds/pwr-red/brightness
+    chown system system /sys/class/leds/pwr-green/use_pattern
+    chmod 664 /sys/class/leds/pwr-green/use_pattern
+    chown system system /sys/class/leds/pwr-green/brightness
+    chmod 664 /sys/class/leds/pwr-green/brightness
+    chown system system /sys/class/leds/pwr-blue/use_pattern
+    chmod 664 /sys/class/leds/pwr-blue/use_pattern
+    chown system system /sys/class/leds/pwr-blue/brightness
+    chmod 664 /sys/class/leds/pwr-blue/brightness
+    chown system system /sys/bus/i2c/devices/10-0040/pattern_data
+    chmod 664 /sys/bus/i2c/devices/10-0040/pattern_data
+    chown system system /sys/bus/i2c/devices/10-0040/pattern_duration_secs
+    chmod 664 /sys/bus/i2c/devices/10-0040/pattern_duration_secs
+    chown system system /sys/bus/i2c/devices/10-0040/pattern_use_softdim
+    chmod 664 /sys/bus/i2c/devices/10-0040/pattern_use_softdim
+    chown system system /sys/bus/i2c/devices/10-0040/pattern_delay
+    chmod 664 /sys/bus/i2c/devices/10-0040/pattern_delay
+    chown system system /sys/bus/i2c/devices/10-0040/dim_time
+    chmod 664 /sys/bus/i2c/devices/10-0040/dim_time
+
 on post-fs
     # Touch firmware update
     write /data/etc/touch_default_module_id 30
