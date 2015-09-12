@@ -3,3 +3,6 @@ telephony.lteOnGsmDevice=1
 
 # Graphics
 ro.sf.lcd_density=320
+
+# Scheduler
+sys.io.scheduler=fiops
