@@ -17,4 +17,4 @@
 char const*const LCD_BACKLIGHT_FILE  = "/sys/class/leds/lcd-backlight_1/brightness";
 char const*const LCD_BACKLIGHT2_FILE = "/sys/class/leds/lcd-backlight_2/brightness";
 char const*const MAX_BRIGHTNESS_FILE = "/sys/class/leds/lcd-backlight_1/max_brightness";
-const int LCD_BRIGHTNESS_MIN         = 10;
+const int LCD_BRIGHTNESS_MIN         = 1;
